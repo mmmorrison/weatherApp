@@ -8,19 +8,10 @@ var x = document.getElementById("local");
 function getLocation() {
  if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
-   console.log(position);
-   console.log('inside geolocation position');
    $("#local").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
   });
  }
-
- $("#local").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
-
 }
-
-
-
-
 
 function getWeather() {
  var retrieveData = $.ajax({
@@ -41,3 +32,7 @@ function getWeather() {
 
  });
 }
+
+//turkey sandwich
+//starburst gummies
+//nos
