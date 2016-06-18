@@ -21,14 +21,14 @@ function getWeather() {
  });
 
  retrieveData.done(function(data) {
-  console.log(data.main);
+  console.log(data.sys.country);
   var cityName = data.name;
   var temp = Math.round(data.main.temp);
   var weatherDescription = data.weather[0].description;
 
   $('#city').append(cityName);
   $('#description').append(weatherDescription);
-  $('#temp').append(temp);
+  $('#temp').append(temp + "&deg;");
 
  });
 }
