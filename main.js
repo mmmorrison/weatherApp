@@ -1,6 +1,6 @@
 $(document).ready(function() {
  getLocation();
- // getWeather();
+ getWeather();
 })
 
 var x = document.getElementById("local");
@@ -8,12 +8,12 @@ var x = document.getElementById("local");
 function getLocation() {
  if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
+   console.log(position);
    $("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
   });
  }
 
  $("#local").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
-
 
 }
 
@@ -23,7 +23,7 @@ function getLocation() {
 
 function getWeather() {
  var retrieveData = $.ajax({
-  url: 'http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=4d6648a4bbb807b27dc7b11eb91cd4d9',
+  url: 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=4d6648a4bbb807b27dc7b11eb91cd4d9',
   type: 'GET',
   dataType: 'json',
  });
