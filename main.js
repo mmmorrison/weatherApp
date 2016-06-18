@@ -3,15 +3,20 @@ $(document).ready(function() {
  getWeather();
 })
 
-var x = document.getElementById("local");
+// var x = document.getElementById("local");
+var obj = {};
 
 function getLocation() {
  if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
-   $("#local").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
+   console.log('f2ogh2lgne2g2qpogj4p2')
+   console.log(position);
   });
  }
 }
+
+
+
 
 function getWeather() {
  var retrieveData = $.ajax({
@@ -21,10 +26,12 @@ function getWeather() {
  });
 
  retrieveData.done(function(data) {
-  console.log(data.sys.country);
+  // console.log(data);
+
   var cityName = data.name;
   var temp = Math.round(data.main.temp);
   var weatherDescription = data.weather[0].description;
+  var whichIcon = data.weather[0].main;
 
   $('#city').append(cityName);
   $('#description').append(weatherDescription);
