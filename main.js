@@ -12,7 +12,7 @@ function getLocation() {
   });
  }
 
- //  $("#local").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
+ $("#local").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
 
 
 }
