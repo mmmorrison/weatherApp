@@ -21,14 +21,16 @@ function getWeather() {
  });
 
  retrieveData.done(function(data) {
-  console.log(data);
-  console.log(location);
+  // console.log(data);
+  console.log(data.weather[0].description);
+  // console.log(tempX);
+  // console.log(description);
   var location = data.name;
-  var temp = data.author;
+  var tempX = data.weather[0].description;
   var title = data.book;
 
   $('#city').append(location);
-  $('#temp').append(temp);
+  $('#description').append(tempX);
 
  });
 }
