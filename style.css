@@ -9,8 +9,28 @@ body{
   background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /*Standard*/
 }
 h1 {
-  /*font-size: 72px;*/
   background: -webkit-linear-gradient(orange, #FF1EA8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.glow {
+  color: #444;
+  text-shadow:
+    1px 0px 1px orange, 0px 1px 1px #FF1EA8,
+    2px 1px 1px orange, 1px 2px 1px #FF1EA8,
+    3px 2px 1px orange, 2px 3px 1px #FF1EA8,
+    4px 3px 1px orange, 3px 4px 1px #FF1EA8,
+    5px 4px 1px orange, 4px 5px 1px #FF1EA8,
+    6px 5px 1px orange, 5px 6px 1px #FF1EA8,
+    7px 6px 1px orange;
+}
+.clouds{
+  padding: 2%;
+  color: red;
+}
+svg {
+  width: 3200px;
+  height: 32px;
+  fill: currentColor;
+  vertical-align: bottom;
 }
