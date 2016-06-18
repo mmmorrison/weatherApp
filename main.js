@@ -22,13 +22,13 @@ function getWeather() {
 
  retrieveData.done(function(data) {
   console.log(data);
-  var quote = data.quote;
-  var author = data.author;
+  console.log(location);
+  var location = data.name;
+  var temp = data.author;
   var title = data.book;
 
-  $('.quote, .author').empty();
-  $('.quote').append(quote);
-  $('.author').append(author);
+  $('#city').append(location);
+  $('#temp').append(temp);
 
  });
 }
