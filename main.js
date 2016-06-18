@@ -17,7 +17,7 @@ function getWeather() {
  var retrieveData = $.ajax({
   url: 'http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=4d6648a4bbb807b27dc7b11eb91cd4d9',
   type: 'GET',
-  dataType: 'JSONP',
+  dataType: 'JSONP'
  });
 
  retrieveData.done(function(data) {
