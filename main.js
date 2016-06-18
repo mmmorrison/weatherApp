@@ -10,7 +10,7 @@ function getLocation() {
   navigator.geolocation.getCurrentPosition(function(position) {
    console.log(position);
    console.log('inside geolocation position');
-   $("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
+   $("#local").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
   });
  }
 
