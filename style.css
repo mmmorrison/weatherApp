@@ -44,6 +44,9 @@ button:focus{
 .wi-day-sunny{
   animation: spin 10s infinite linear;
   color: #FFA500;
+  background: -webkit-linear-gradient(rgb(9, 218, 242), rgb(250, 255, 0));
+  -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
 }
 .sun{
   animation: spin 10s infinite linear;
