@@ -24,9 +24,11 @@ function getWeather() {
   var cityName = data.name;
   var temp = Math.round(data.main.temp) * 9/5 + 32
   var weatherDescription = data.weather[0].description;
-  var whichIcon = data.weather[0].main;
+  var weather = data.weather[0].main;
   var celsius = Math.round(data.main.temp) + '&deg; C';
   var farenheit = Math.round(data.main.temp) * 9/5 + 32 + '&deg; F';
+
+  weatherChooser(weather);
 
   $('#city').append(cityName);
   $('#description').append(weatherDescription);
@@ -39,6 +41,36 @@ function getWeather() {
   $('.celsius').on('click', function () {
     $('#temp').empty().append(celsius)
   });
+
+  function weatherChooser(weather){
+    switch(weather){
+      case 'Dizzle':
+        IconChooser(weather)
+        break;
+      case 'Clouds':
+        IconChooser(weather)
+        break;
+      case 'Rain':
+        IconChooser(weather)
+        break;
+      case 'Snow':
+        IconChooser(weather)
+        break;
+      case 'Clear':
+        IconChooser(weather)
+        break;
+      case 'Thunderstom':
+        IconChooser(city)
+        break;
+      default:
+    $('.weatherIcon').removeClass('hide');
+      }
+    };
+
+    function IconChooser(weather) {
+      console.log('the weather is ' + weather);
+    };
+
 
  });
 };

@@ -41,3 +41,6 @@ h1 {
 button:focus{
   outline:0;
 }
+.wi{
+  font-size: 5em;
+}
