@@ -45,6 +45,9 @@ button:focus{
   animation: spin 10s infinite linear;
   color: #FFA500;
 }
+.sun{
+  animation: spin 10s infinite linear;
+}
 @keyframes spin {
 	from { transform: rotate(0deg); }
 	to { transform: rotate(360deg); }
