@@ -16,7 +16,9 @@ function getWeather() {
   url: 'http://api.openweathermap.org/data/2.5/weather?lat=39.7003055&lon=104.8917007&units=metric&appid=4d6648a4bbb807b27dc7b11eb91cd4d9',
   type: 'GET',
   dataType: 'jsonp',
-  crossDomain: true
+  headers: {
+            'Access-Control-Allow-Origin': '*'
+   }
  });
 
 
