@@ -28,8 +28,6 @@ function getWeather() {
   var celsius = Math.round(data.main.temp) + '&deg; C';
   var farenheit = Math.round(data.main.temp) + '&deg; F';
 
-  // T(°C) = (T(°F) - 32) × 5/9
-
   $('#city').append(cityName);
   $('#description').append(weatherDescription);
   $('#temp').append(temp + "&deg; F");
