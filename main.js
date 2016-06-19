@@ -29,6 +29,7 @@ function getWeather() {
   var farenheit = Math.round(data.main.temp) * 9/5 + 32 + '&deg; F';
 
   weatherChooser(weather);
+  IconChooser(weather)
 
   $('#city').append(cityName);
   $('#description').append(weatherDescription);
@@ -43,6 +44,8 @@ function getWeather() {
   });
 
   function weatherChooser(weather){
+    console.log('the weather is', weather);
+    weather = weather.toLowerCase();
     switch(weather){
       case 'Dizzle':
         IconChooser(weather)
@@ -60,15 +63,21 @@ function getWeather() {
         IconChooser(weather)
         break;
       case 'Thunderstom':
-        IconChooser(city)
+        IconChooser(weather)
         break;
       default:
-    $('.weatherIcon').removeClass('hide');
+    $('i.clear').removeClass('hide');
       }
     };
+    // function addIcon(city) {
+    //    $('div.' + city).removeClass('hide');
+    //  }
 
     function IconChooser(weather) {
-      console.log('the weather is ' + weather);
+      $('i.clear').addClass('hide')
+      console.log('inside IconChooser ', weather);
+      // $('span.test').html(weather)
+      // $('i.' + weather).removeClass('hide')
     };
 
 

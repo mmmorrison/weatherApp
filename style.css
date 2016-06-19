@@ -52,3 +52,6 @@ button:focus{
 .wi{
   font-size: 5em;
 }
+.hide{
+  visibility: hidden;
+}
