@@ -22,13 +22,25 @@ function getWeather() {
   console.log(data);
 
   var cityName = data.name;
-  var temp = Math.round(data.main.temp) * 9/5 + 32;
+  var temp = Math.round(data.main.temp) * 9/5 + 32
   var weatherDescription = data.weather[0].description;
   var whichIcon = data.weather[0].main;
+  var celsius = Math.round(data.main.temp) + '&deg; C';
+  var farenheit = Math.round(data.main.temp) + '&deg; F';
+
+  // T(°C) = (T(°F) - 32) × 5/9
 
   $('#city').append(cityName);
   $('#description').append(weatherDescription);
-  $('#temp').append(temp + "&deg;");
+  $('#temp').append(temp + "&deg; F");
+
+  $('.farenheit').on('click', function () {
+    $('#temp').empty().append(farenheit)
+  });
+
+  $('.celsius').on('click', function () {
+    $('#temp').empty().append(celsius)
+  });
 
  });
 };
