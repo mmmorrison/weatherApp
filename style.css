@@ -29,6 +29,15 @@ h1 {
   padding: 2%;
 }
 .whyNot{
-  /*color: #147E92;*/
   margin-bottom: 5%;
+}
+.celsius, .farenheit{
+    display: inline-block;
+    background: -webkit-linear-gradient(#85eafc, #147e92);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-color: #147e92;
+}
+button:focus{
+  outline:0;
 }
