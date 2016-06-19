@@ -41,6 +41,14 @@ h1 {
 button:focus{
   outline:0;
 }
+.wi-day-sunny{
+  animation: spin 10s infinite linear;
+  color: #FFA500;
+}
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
 .wi{
   font-size: 5em;
 }
