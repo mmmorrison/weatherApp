@@ -44,8 +44,8 @@ function getWeather() {
   });
 
   function weatherChooser(weather){
-    console.log('the weather is', weather);
     weather = weather.toLowerCase();
+
     switch(weather){
       case 'Dizzle':
         IconChooser(weather)
@@ -65,19 +65,12 @@ function getWeather() {
       case 'Thunderstom':
         IconChooser(weather)
         break;
-      default:
-    $('i.clear').removeClass('hide');
       }
     };
-    // function addIcon(city) {
-    //    $('div.' + city).removeClass('hide');
-    //  }
 
     function IconChooser(weather) {
-      $('i.clear').addClass('hide')
-      console.log('inside IconChooser ', weather);
-      // $('span.test').html(weather)
-      // $('i.' + weather).removeClass('hide')
+      weather = weather.toLowerCase();
+      $('div.' + weather).removeClass('hide')
     };
 
 

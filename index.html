@@ -78,15 +78,30 @@
             <div class="weather">
                 <h1 class="text-center glow" id='description'></h1>
                 <div class="weatherIcon text-center">
-                  <i class="wi wi-day-rain-mix hide drizzle"></i>
-                  <i class="wi wi-day-rain hide rain"></i>
-                  <i class="wi wi-snow hide snow"></i>
-                  <i class="wi wi-day-sunny hide clear"></i>
-                  <i class="wi wi-thunderstorm hide thunderstorm"></i>
+                  <div class="drizzle hide">
+                    <i class="wi wi-day-rain-mix"></i>
+                  </div>
+                  <div class="clouds hide">
+                    <i class="wi wi-day-cloudy"></i>
+                  </div>
+                  <div class="rain hide">
+                    <i class="wi wi-day-rain"></i>
+                  </div>
+                  <div class="snow hide">
+                    <i class="wi wi-snow"></i>
+                  </div>
+                  <div class="clear hide">
+                    <i class="wi wi-day-sunny"></i>
+                  </div>
+                  <div class="thunderstorm hide">
+                    <i class="wi wi-thunderstorm"></i>
+                  </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="main.js" charset="utf-8"></script>
