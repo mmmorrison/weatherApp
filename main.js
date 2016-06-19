@@ -9,7 +9,7 @@ var obj = {};
 function getLocation() {
  if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
-   console.log(position.Geopostion);
+    console.log(position);
   });
  }
 }

@@ -14,7 +14,7 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 .glow {
-  color: #444;
+  /*color: #444;*/
   text-shadow:
     1px 0px 1px orange, 0px 1px 1px #FF1EA8,
     2px 1px 1px orange, 1px 2px 1px #FF1EA8,
@@ -23,14 +23,12 @@ h1 {
     5px 4px 1px orange, 4px 5px 1px #FF1EA8,
     6px 5px 1px orange, 5px 6px 1px #FF1EA8,
     7px 6px 1px orange;
+    margin-bottom: 5%;
 }
 .clouds{
   padding: 2%;
-  color: red;
 }
-svg {
-  width: 3200px;
-  height: 32px;
-  fill: currentColor;
-  vertical-align: bottom;
+.whyNot{
+  /*color: #147E92;*/
+  margin-bottom: 5%;
 }
