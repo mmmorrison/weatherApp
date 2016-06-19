@@ -25,7 +25,7 @@ function getWeather() {
   console.log(data);
 
   var cityName = data.name;
-  var temp = Math.round(data.main.temp);
+  var temp = Math.round(data.main.temp) * 9/5 + 32;
   var weatherDescription = data.weather[0].description;
   var whichIcon = data.weather[0].main;
 
