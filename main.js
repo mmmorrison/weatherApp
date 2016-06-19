@@ -3,9 +3,6 @@ $(document).ready(function() {
  getWeather();
 })
 
-// var x = document.getElementById("local");
-var obj = {};
-
 function getLocation() {
  if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
