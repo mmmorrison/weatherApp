@@ -26,7 +26,7 @@ function getWeather() {
   var weatherDescription = data.weather[0].description;
   var whichIcon = data.weather[0].main;
   var celsius = Math.round(data.main.temp) + '&deg; C';
-  var farenheit = Math.round(data.main.temp) + '&deg; F';
+  var farenheit = Math.round(data.main.temp) * 9/5 + 32 + '&deg; F';
 
   $('#city').append(cityName);
   $('#description').append(weatherDescription);
