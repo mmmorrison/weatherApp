@@ -18,7 +18,7 @@ function getWeather() {
   dataType: 'jsonp',
   headers: {
             'Access-Control-Allow-Origin': '*'
-   },
+   }
  });
 
 
