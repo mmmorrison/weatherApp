@@ -1,17 +1,22 @@
 $(document).ready(function() {
- getLocation();
  getWeather();
 })
 
 function getLocation() {
  if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
-    console.log(position);
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    var whereAbouts = {lat:lat, lon:lon};
+    console.log(whereAbouts);
+    return whereAbouts
   });
  }
 }
 
 function getWeather() {
+  getLocation();
+
  var retrieveData = $.ajax({
   url: 'http://api.openweathermap.org/data/2.5/weather?lat=39.7003055&lon=-104.8917007&units=metric&appid=4d6648a4bbb807b27dc7b11eb91cd4d9',
   type: 'GET',
@@ -23,7 +28,6 @@ function getWeather() {
 
 
  retrieveData.done(function(data) {
-  console.log(data);
 
   var cityName = data.name;
   var temp = Math.round(data.main.temp) * 9/5 + 32
@@ -76,7 +80,6 @@ function getWeather() {
       weather = weather.toLowerCase();
       $('div.' + weather).removeClass('hide')
     };
-
 
  });
 };
